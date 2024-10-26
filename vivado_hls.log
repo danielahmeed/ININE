@@ -1,0 +1,214 @@
+INFO: [HLS 200-10] Running 'C:/Users/ahmed/Desktop/Vivado/2018.2/bin/unwrapped/win64.o/vivado_hls.exe'
+INFO: [HLS 200-10] For user 'ahmed' on host 'laptop-654f06f9' (Windows NT_amd64 version 6.2) on Sat Sep 07 23:49:53 +0530 2024
+INFO: [HLS 200-10] In directory 'C:/Users/ahmed/Desktop/mod2'
+INFO: [HLS 200-10] Opening project 'C:/Users/ahmed/Desktop/mod2/Mod2'.
+INFO: [HLS 200-10] Adding design file 'MOD2.c' to the project
+INFO: [HLS 200-10] Adding test bench file 'MOD2_test_suite.c' to the project
+INFO: [HLS 200-10] Opening solution 'C:/Users/ahmed/Desktop/mod2/Mod2/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xqvu7p-flrb2104-2lv-e'
+INFO: [HLS 200-10] Analyzing design file 'MOD2.c' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 102.875 ; gain = 47.016
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 102.875 ; gain = 47.016
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [XFORM 203-603] Inlining function 'k2c_relu_func' into 'k2c_conv2d' (MOD2.c:7313).
+INFO: [XFORM 203-603] Inlining function 'k2c_conv2d' into 'MOD2' (MOD2.c:7188).
+INFO: [XFORM 203-603] Inlining function 'k2c_conv2d' into 'MOD2' (MOD2.c:7184).
+INFO: [XFORM 203-603] Inlining function 'k2c_maxpool2d' into 'MOD2' (MOD2.c:7190).
+INFO: [XFORM 203-603] Inlining function 'k2c_maxpool2d' into 'MOD2' (MOD2.c:7186).
+INFO: [XFORM 203-603] Inlining function 'k2c_flatten' into 'MOD2' (MOD2.c:7192).
+INFO: [XFORM 203-603] Inlining function 'k2c_affine_matmul' into 'k2c_dense' (MOD2.c:7379).
+INFO: [XFORM 203-603] Inlining function 'k2c_softmax_func' into 'k2c_dense' (MOD2.c:7391).
+INFO: [XFORM 203-603] Inlining function 'k2c_softmax_func' into 'k2c_dense' (MOD2.c:7381).
+INFO: [XFORM 203-603] Inlining function 'k2c_idx2sub' into 'k2c_dot' (MOD2.c:7527).
+INFO: [XFORM 203-603] Inlining function 'k2c_idx2sub' into 'k2c_dot' (MOD2.c:7516).
+INFO: [XFORM 203-603] Inlining function 'k2c_sub2idx' into 'k2c_dot' (MOD2.c:7532).
+INFO: [XFORM 203-603] Inlining function 'k2c_sub2idx' into 'k2c_dot' (MOD2.c:7521).
+INFO: [XFORM 203-603] Inlining function 'k2c_matmul' into 'k2c_dot' (MOD2.c:7569).
+INFO: [XFORM 203-603] Inlining function 'k2c_dot' into 'k2c_dense' (MOD2.c:7389).
+INFO: [XFORM 203-603] Inlining function 'k2c_dense' into 'MOD2' (MOD2.c:7220).
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:51 ; elapsed = 00:01:15 . Memory (MB): peak = 2425.793 ; gain = 2369.934
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:51 ; elapsed = 00:01:16 . Memory (MB): peak = 2425.793 ; gain = 2369.934
+INFO: [XFORM 203-502] Unrolling small iteration loop 'Loop-28' (MOD2.c:7405) in function 'MOD2' automatically.
+WARNING: [XFORM 203-561] Updating loop upper bound from 64 to 32 for loop 'Loop-15-0-0-0-0-0' (MOD2.c:7297:1) in function 'MOD2'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 34 to 32 for loop 'Loop-15-0-0-0-0-0' (MOD2.c:7297:1) in function 'MOD2'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 11 to 26 for loop 'Loop-15-0' (MOD2.c:7289:1) in function 'MOD2'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 11 to 26 for loop 'Loop-15' (MOD2.c:7287:1) in function 'MOD2'.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-28' (MOD2.c:7405) in function 'MOD2' completely.
+INFO: [XFORM 203-102] Partitioning array 'conv2d_stride' (MOD2.c:23) automatically.
+INFO: [XFORM 203-102] Partitioning array 'conv2d_dilation' (MOD2.c:24) automatically.
+INFO: [XFORM 203-102] Partitioning array 'max_pooling2d_stride' (MOD2.c:143) automatically.
+INFO: [XFORM 203-102] Partitioning array 'max_pooling2d_pool_size' (MOD2.c:144) automatically.
+INFO: [XFORM 203-102] Partitioning array 'conv2d_1_stride' (MOD2.c:162) automatically.
+INFO: [XFORM 203-102] Partitioning array 'conv2d_1_dilation' (MOD2.c:163) automatically.
+INFO: [XFORM 203-102] Partitioning array 'max_pooling2d_1_stride' (MOD2.c:3911) automatically.
+INFO: [XFORM 203-102] Partitioning array 'max_pooling2d_1_pool_size' (MOD2.c:3912) automatically.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:52 ; elapsed = 00:01:17 . Memory (MB): peak = 2425.793 ; gain = 2369.934
+WARNING: [XFORM 203-152] Cannot apply array mapping directives with instance name 'conv2d_output_array' (MOD2.c:25): cannot find another array to be merged with.
+WARNING: [XFORM 203-152] Cannot apply array mapping directives with instance name 'flatten_output_array': cannot find another array to be merged with.
+WARNING: [XFORM 203-561] Updating loop upper bound from 732 to 13 for loop 'Loop-16-0' (MOD2.c:7327:1) in function 'MOD2'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 65 to 13 for loop 'Loop-16-0' (MOD2.c:7327:1) in function 'MOD2'.
+WARNING: [XFORM 203-561] Updating loop upper bound from 64 to 32 for loop 'Loop-16' (MOD2.c:7324:1) in function 'MOD2'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 34 to 64 for loop 'Loop-18-0-0-0-0-0' (MOD2.c:7297:1) in function 'MOD2'.
+WARNING: [XFORM 203-561] Updating loop upper bound from 1 to 32 for loop 'Loop-18-0-0-0-0' (MOD2.c:7295:1) in function 'MOD2'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 1 to 32 for loop 'Loop-18-0-0-0-0' (MOD2.c:7295:1) in function 'MOD2'.
+WARNING: [XFORM 203-561] Updating loop upper bound from 26 to 11 for loop 'Loop-18-0' (MOD2.c:7289:1) in function 'MOD2'.
+WARNING: [XFORM 203-561] Updating loop upper bound from 26 to 11 for loop 'Loop-18' (MOD2.c:7287:1) in function 'MOD2'.
+WARNING: [XFORM 203-561] Updating loop upper bound from 5408 to 5 for loop 'Loop-20-0-0' (MOD2.c:7330:1) in function 'MOD2'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 1600 to 5 for loop 'Loop-20-0-0' (MOD2.c:7330:1) in function 'MOD2'.
+WARNING: [XFORM 203-561] Updating loop upper bound from 732 to 5 for loop 'Loop-20-0' (MOD2.c:7327:1) in function 'MOD2'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 65 to 5 for loop 'Loop-20-0' (MOD2.c:7327:1) in function 'MOD2'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 32 to 64 for loop 'Loop-20' (MOD2.c:7324:1) in function 'MOD2'.
+WARNING: [XFORM 203-561] Updating loop upper bound from 3 to 1600 for loop 'Loop-24-0' (MOD2.c:7411:1) in function 'MOD2'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 3 to 1600 for loop 'Loop-24-0' (MOD2.c:7411:1) in function 'MOD2'.
+WARNING: [XFORM 203-561] Updating loop upper bound from 3 to 10 for loop 'Loop-24' (MOD2.c:7408:1) in function 'MOD2'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 3 to 10 for loop 'Loop-24' (MOD2.c:7408:1) in function 'MOD2'.
+WARNING: [XFORM 203-561] Updating loop upper bound from 3328 to 2 for loop 'Loop-16-0-0-0-0' (MOD2.c:7336:1) in function 'MOD2'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 704 to 2 for loop 'Loop-16-0-0-0-0' (MOD2.c:7336:1) in function 'MOD2'.
+WARNING: [XFORM 203-561] Updating loop upper bound from 128 to 2 for loop 'Loop-16-0-0-0' (MOD2.c:7333:1) in function 'MOD2'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 26 to 2 for loop 'Loop-16-0-0-0' (MOD2.c:7333:1) in function 'MOD2'.
+WARNING: [XFORM 203-561] Updating loop upper bound from 3328 to 2 for loop 'Loop-20-0-0-0-0' (MOD2.c:7336:1) in function 'MOD2'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 704 to 2 for loop 'Loop-20-0-0-0-0' (MOD2.c:7336:1) in function 'MOD2'.
+WARNING: [XFORM 203-561] Updating loop upper bound from 128 to 2 for loop 'Loop-20-0-0-0' (MOD2.c:7333:1) in function 'MOD2'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 26 to 2 for loop 'Loop-20-0-0-0' (MOD2.c:7333:1) in function 'MOD2'.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:56 ; elapsed = 00:01:23 . Memory (MB): peak = 2425.793 ; gain = 2369.934
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'MOD2' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'k2c_bias_add' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 82.65 seconds; current allocated memory: 123.619 MB.
+INFO: [HLS 200-434] Only 0 loops out of a total 2 loops have been pipelined in this design.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.079 seconds; current allocated memory: 123.781 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'MOD2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.535 seconds; current allocated memory: 126.427 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.63 seconds; current allocated memory: 128.641 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'k2c_bias_add' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'MOD2_fadd_32ns_32ns_32_4_full_dsp_1' to 'MOD2_fadd_32ns_32bkb' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'MOD2_fadd_32ns_32bkb': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'k2c_bias_add'.
+INFO: [HLS 200-111]  Elapsed time: 0.718 seconds; current allocated memory: 129.068 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'MOD2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'MOD2/input_1_input_array' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'MOD2/input_1_input_ndim' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'MOD2/input_1_input_numel' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'MOD2/input_1_input_shape' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'MOD2/dense_output_array' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'MOD2/dense_output_ndim' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'MOD2/dense_output_numel' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'MOD2/dense_output_shape' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'MOD2' to 'ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Global array 'conv2d_output_array' will not be exposed as RTL port.
+INFO: [SYN 201-210] Renamed object name 'MOD2_conv2d_output_array' to 'MOD2_conv2d_outpucud' due to the length limit 20
+WARNING: [RTGEN 206-101] Register 'conv2d_output_numel' is power-on initialization.
+WARNING: [RTGEN 206-101] Global scalar 'conv2d_output_numel' will not be exposed as RTL port.
+INFO: [SYN 201-210] Renamed object name 'MOD2_conv2d_kernel_array' to 'MOD2_conv2d_kernedEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'MOD2_conv2d_kernel_array_3' to 'MOD2_conv2d_kerneeOg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'MOD2_conv2d_bias_array' to 'MOD2_conv2d_bias_fYi' due to the length limit 20
+WARNING: [RTGEN 206-101] Global array 'conv2d_bias_array_0' will not be exposed as RTL port.
+INFO: [SYN 201-210] Renamed object name 'MOD2_conv2d_bias_array_0' to 'MOD2_conv2d_bias_g8j' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'MOD2_max_pooling2d_output' to 'MOD2_max_pooling2hbi' due to the length limit 20
+WARNING: [RTGEN 206-101] Register 'max_pooling2d_output_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Global array 'conv2d_1_output_arra' will not be exposed as RTL port.
+INFO: [SYN 201-210] Renamed object name 'MOD2_conv2d_1_output_arra' to 'MOD2_conv2d_1_outibs' due to the length limit 20
+WARNING: [RTGEN 206-101] Register 'conv2d_1_output_nume' is power-on initialization.
+WARNING: [RTGEN 206-101] Global scalar 'conv2d_1_output_nume' will not be exposed as RTL port.
+WARNING: [RTGEN 206-101] Global array 'MOD2_conv2d_1_kernel' will not be exposed as RTL port.
+INFO: [SYN 201-210] Renamed object name 'MOD2_MOD2_conv2d_1_kernel' to 'MOD2_MOD2_conv2d_jbC' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'MOD2_conv2d_1_kernel_arra' to 'MOD2_conv2d_1_kerkbM' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'MOD2_conv2d_1_bias_array' to 'MOD2_conv2d_1_bialbW' due to the length limit 20
+WARNING: [RTGEN 206-101] Global array 'conv2d_1_bias_array_1' will not be exposed as RTL port.
+INFO: [SYN 201-210] Renamed object name 'MOD2_conv2d_1_bias_array_1' to 'MOD2_conv2d_1_biamb6' due to the length limit 20
+WARNING: [RTGEN 206-101] Register 'conv2d_1_bias_numel' is power-on initialization.
+WARNING: [RTGEN 206-101] Global scalar 'conv2d_1_bias_numel' will not be exposed as RTL port.
+INFO: [SYN 201-210] Renamed object name 'MOD2_max_pooling2d_1_outp' to 'MOD2_max_pooling2ncg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'MOD2_flatten_output_array' to 'MOD2_flatten_outpocq' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'MOD2_dense_kernel_array' to 'MOD2_dense_kernelpcA' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'MOD2_dense_kernel_array_2' to 'MOD2_dense_kernelqcK' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'MOD2_dense_bias_array1' to 'MOD2_dense_bias_arcU' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'MOD2_dense_bias_array' to 'MOD2_dense_bias_asc4' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'MOD2_dropout_output_array' to 'MOD2_dropout_outptde' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'MOD2_faddfsub_32ns_32ns_32_4_full_dsp_1' to 'MOD2_faddfsub_32nudo' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'MOD2_fmul_32ns_32ns_32_2_max_dsp_1' to 'MOD2_fmul_32ns_32vdy' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'MOD2_fdiv_32ns_32ns_32_8_1' to 'MOD2_fdiv_32ns_32wdI' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'MOD2_fcmp_32ns_32ns_1_1_1' to 'MOD2_fcmp_32ns_32xdS' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'MOD2_fexp_32ns_32ns_32_6_full_dsp_1' to 'MOD2_fexp_32ns_32yd2' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'MOD2_mac_muladd_16s_6s_2ns_16_1_1' to 'MOD2_mac_muladd_1zec' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'MOD2_ama_addmuladd_16s_5ns_16s_16ns_16_1_1' to 'MOD2_ama_addmuladAem' due to the length limit 20
+WARNING: [RTGEN 206-101] Port 'MOD2/input_1_input_ndim' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'MOD2/input_1_input_numel' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'MOD2/dense_output_ndim' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'MOD2/dense_output_shape_address0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'MOD2/dense_output_shape_address0' to 0.
+WARNING: [RTGEN 206-101] Port 'MOD2/dense_output_shape_ce0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'MOD2/dense_output_shape_ce0' to 0.
+WARNING: [RTGEN 206-101] Port 'MOD2/dense_output_shape_we0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'MOD2/dense_output_shape_we0' to 0.
+WARNING: [RTGEN 206-101] Port 'MOD2/dense_output_shape_d0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'MOD2/dense_output_shape_d0' to 0.
+WARNING: [RTGEN 206-101] Port 'MOD2/dense_output_shape_q0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'MOD2/dense_output_shape_address1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'MOD2/dense_output_shape_address1' to 0.
+WARNING: [RTGEN 206-101] Port 'MOD2/dense_output_shape_ce1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'MOD2/dense_output_shape_ce1' to 0.
+WARNING: [RTGEN 206-101] Port 'MOD2/dense_output_shape_we1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'MOD2/dense_output_shape_we1' to 0.
+WARNING: [RTGEN 206-101] Port 'MOD2/dense_output_shape_d1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'MOD2/dense_output_shape_d1' to 0.
+WARNING: [RTGEN 206-101] Port 'MOD2/dense_output_shape_q1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+INFO: [RTGEN 206-100] Generating core module 'MOD2_ama_addmuladAem': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'MOD2_faddfsub_32nudo': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'MOD2_fcmp_32ns_32xdS': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'MOD2_fdiv_32ns_32wdI': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'MOD2_fexp_32ns_32yd2': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'MOD2_fmul_32ns_32vdy': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'MOD2_mac_muladd_1zec': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'MOD2'.
+INFO: [HLS 200-111]  Elapsed time: 0.715 seconds; current allocated memory: 133.213 MB.
+INFO: [RTMG 210-278] Implementing memory 'MOD2_conv2d_outpucud_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-279] Implementing memory 'MOD2_conv2d_kernedEe_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'MOD2_conv2d_bias_fYi_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'MOD2_MOD2_conv2d_jbC_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'MOD2_conv2d_1_bialbW_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'MOD2_dense_kernelpcA_rom' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'MOD2_dense_bias_arcU_rom' using distributed ROMs.
+INFO: [RTMG 210-278] Implementing memory 'MOD2_conv2d_1_kerkbM_ram (RAM)' using block RAMs.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:01:00 ; elapsed = 00:01:34 . Memory (MB): peak = 2425.793 ; gain = 2369.934
+INFO: [SYSC 207-301] Generating SystemC RTL for MOD2.
+INFO: [VHDL 208-304] Generating VHDL RTL for MOD2.
+INFO: [VLOG 209-307] Generating Verilog RTL for MOD2.
+INFO: [HLS 200-112] Total elapsed time: 94.41 seconds; peak allocated memory: 133.213 MB.
